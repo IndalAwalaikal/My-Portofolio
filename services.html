@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+    <title>Services - Indal Awalaikal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      .services-container {
+        width: 100%;
+        min-height: 90vh;
+        padding: 2rem;
+        color: #e6f1ff;
+      }
+
+      .services-content {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .services-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .services-header h2 {
+        font-size: 2.5rem;
+        color: #64ffda;
+        margin-bottom: 1rem;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .service-card {
+        background: rgba(100, 255, 218, 0.1);
+        padding: 2rem;
+        border-radius: 10px;
+        border: 1px solid #64ffda;
+        transition: transform 0.3s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .service-icon {
+        font-size: 3rem;
+        color: #64ffda;
+        margin-bottom: 1rem;
+      }
+
+      .service-card h3 {
+        color: #64ffda;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .service-card p {
+        color: #8892b0;
+        margin-bottom: 1rem;
+      }
+
+      .service-card ul {
+        list-style: none;
+        color: #8892b0;
+      }
+
+      .service-card ul li {
+        margin: 0.5rem 0;
+      }
+
+      .service-card ul li i {
+        color: #64ffda;
+        margin-right: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation (same as before) -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+          <span>Indal Awalaikal</span>
+        </div>
+        <div class="links">
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <a href="index.html">Home</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <a href="about.html">About</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            <a href="skills.html">Skills</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            <a href="services.html">Services</a>
+          </div>
+          <div
+            class="link"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
+            <a href="blogs.html">Blogs</a>
+          </div>
+          <div
+            class="link contact-btn"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+          >
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+      </div>
+      <div class="dropdown">
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="services.html">Services</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="contact.html">Contact Us</a>
+          <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+      </div>
+    </nav>
+
+    <section class="services-container">
+      <div class="services-content">
+        <div
+          class="services-header"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
+          <h2>My Services</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Custom web development solutions tailored to your needs</p>
+            <ul>
+              <li><i class="fas fa-check"></i>Responsive Design</li>
+              <li><i class="fas fa-check"></i>Frontend Development</li>
+              <li><i class="fas fa-check"></i>Backend Integration</li>
+              <li><i class="fas fa-check"></i>API Development</li>
+            </ul>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Creating beautiful and functional user interfaces</p>
+            <ul>
+              <li><i class="fas fa-check"></i>User Research</li>
+              <li><i class="fas fa-check"></i>Wireframing</li>
+              <li><i class="fas fa-check"></i>Prototyping</li>
+              <li><i class="fas fa-check"></i>Visual Design</li>
+            </ul>
+          </div>
+
+          <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile Development</h3>
+            <p>Building responsive and native mobile applications</p>
+            <ul>
+              <li><i class="fas fa-check"></i>iOS Development</li>
+              <li><i class="fas fa-check"></i>Android Development</li>
+              <li><i class="fas fa-check"></i>Cross-platform Apps</li>
+              <li><i class="fas fa-check"></i>App Maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 0 });
+    </script>
+    <script>
+      function hamburg() {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(0px)";
+      }
+      function cancel() {
+        const navbar = document.querySelector(".dropdown");
+        navbar.style.transform = "translateY(-500px)";
+      }
+    </script>
+  </body>
+</html>
